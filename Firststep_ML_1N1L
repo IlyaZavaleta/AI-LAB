@@ -16,3 +16,11 @@ model.fit(xs,ys,epochs=1000)
 
 print(model.predict([10.0]))
 print("Here is what i learned:{}".format(l0.get_weights()))
+
+# Obtener los pesos y sesgos del modelo
+weights, bias = l0.get_weights()
+
+# Formatear como una ecuación lineal
+equation = "y = {}x + {}".format(weights[0][0], bias[0])
+
+print(equation)
